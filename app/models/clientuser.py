@@ -1,11 +1,8 @@
 from pydantic import BaseModel
 
-class clientuser(BaseModel):
-    client_name : str
-    location : str
-    description : str
-    status : bool
-
-    
-
-    
+class Client(BaseModel):
+    name: str
+    location: str
+    description: str | None = None
+    usermail: str
+    phone: str
